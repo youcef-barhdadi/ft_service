@@ -1,0 +1,7 @@
+service:
+    wordpress:
+        imgae: ./wordpress/
+        ports:
+            8080:80
+        network:
+            - wordpress:/var/ww/

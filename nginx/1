@@ -1,0 +1,9 @@
+FROM alpine:latest
+RUN apk update; apk add nginx openrc
+COPY nginx.conf /tmp/
+COPY script.sh /tmp/
+
+EXPOSE 80
+
+
+CMD ["sh /tmp/script.sh  && sh"]
